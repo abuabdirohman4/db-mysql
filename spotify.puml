@@ -83,4 +83,9 @@ class Concert {
     lat : DOUBLE
 }
 
+Artist }|--|{ Album
+Album ||--|{Song
+Artist }|--|{ Song
+PlaylistCategory |o--|{ Playlist
+
 @enduml
