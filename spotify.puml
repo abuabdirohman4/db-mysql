@@ -84,8 +84,10 @@ class Concert {
 }
 
 Artist }|--|{ Album
-Album ||--|{Song
+Album ||--|{ Song
 Artist }|--|{ Song
 PlaylistCategory |o--|{ Playlist
+User ||--|{ Playlist
+Playlist }o--o{ Song
 
 @enduml
