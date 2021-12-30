@@ -83,11 +83,22 @@ class Concert {
     lat : DOUBLE
 }
 
+' Artist Relation
 Artist }|--|{ Album
-Album ||--|{ Song
-Artist }|--|{ Song
-PlaylistCategory |o--|{ Playlist
-User ||--|{ Playlist
+
+' Album Relation
+
+' Song Relation
+Song }|--|| Album
+Song }|--|{ Artist
+
+' Playlist Relation
+Playlist }|--o| PlaylistCategory
+Playlist }o--|| User
 Playlist }o--o{ Song
+
+' Podcast Relation
+PodcastCategory |o--|{ Podcast
+User ||--o{ Podcast
 
 @enduml
